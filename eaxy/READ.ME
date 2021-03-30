@@ -1,0 +1,19 @@
+Eerst bekijken met Cyberchef:
+
+Zet de file om naar base64 zodat je hem fatsoenlijk in Cyberchef kunt krijgen:
+
+base64 eaxy
+
+copy string naar cyberchef en dan direct om zetten naar decode base64 om weer het originele bestand te krijgen.
+
+Met een XOR Brute Force kun je erachter komen hoe de encryptie is opgebouwd.
+Delen zijn met verschillende keys gecodeerd.
+
+In de XOR Brute Force zie je dat 66 wordt gebruikt en hier leesbare tekens uit komen:
+Key = 66: The XOR key you used to find string this is the 0 character index of the flag :)
+
+Als je nu het XOR Brute Force component vervangt voor een XOR component
+En als Key een f invult, dit is een 0x66, dan krijg je de voorgaande string terug op een aantal plaatsen.
+Hiermee kun je dus de posities terugvinden vna de characters, nu moet je hiervoor een appje maken ;-)
+
+zie decode.py
